@@ -8,13 +8,7 @@
 name: Java CI with Gradle
 
 on:
-  push:
-    # Sequence of patterns matched against refs/heads
-    branches:    
-      - 'releases/**'
-    # Sequence of patterns matched against refs/tags
-    tags:        
-      - '*'
+   workflow_dispatch:
 
 jobs:
   build_folia:
