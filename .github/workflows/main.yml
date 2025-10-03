@@ -6,15 +6,14 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
 
 name: Java CI with Gradle
-
 on:
   push:
-    # Sequence of patterns matched against refs/heads
-    branches:    
-      - 'releases/**'
-    # Sequence of patterns matched against refs/tags
-    tags:        
-      - '*'
+    branches:
+      - 'release/**'
+  pull_request:
+    branches:
+      - 'main'
+  workflow_dispatch:  # 这一行是添加的手动触发
 
 jobs:
   build_folia:
